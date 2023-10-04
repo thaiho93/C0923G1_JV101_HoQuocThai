@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>cước điện thoại</title>
+</head>
+<body>
+<!--Tính cước điện thoại cho một hộ gia đình với các thông số đã cho.-->
+<!--gọi nội mạng : 500đ/phút; gọi ngoài nước: 3000đ/ phút; gọi gọi mạng: 1000đ/phút.-->
+<script>
+    let noiMang = +prompt("nhập số phút goi nội mạng");
+    let ngoaiMang = +prompt("nhập số phút goi ngoại mạng");
+    let ngoaiNuoc = +prompt("nhập số phút goi ngoài nước");
+    let cuocDienThoai = noiMang * 500 + ngoaiMang * 1000 + ngoaiNuoc * 3000;
+    if (noiMang >= 0 && ngoaiMang >= 0 && ngoaiNuoc >= 0) {
+        document.write("cước điện thoaị là: " + cuocDienThoai + " vnđ");
+    } else
+        document.write("nhập sai dữ liệu");
+</script>
+</body>
+</html>

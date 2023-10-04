@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>tính giá điện</title>
+</head>
+<body>
+<!--Viết chương trình tính giá điện.-->
+<!--0-> 10 chữ: 500đ-->
+<!--10-50 chữ: 1000đ-->
+<!--50-100 chữ: 2000đ-->
+<!--100 -> lên: 3000đ-->
+<script>
+    let num = +prompt("nhập số chữ điện đã xài");
+    let cuocDien;
+    if (num > 100) {
+        cuocDien = (num - 100) * 3000 + 145000;
+    } else if
+    (num > 50) {
+        cuocDien = (num - 50) * 2000 + 45000;
+    } else if (num > 10) {
+        cuocDien = (num - 10) * 1000 + 5000;
+    } else if (num >= 0) {
+        cuocDien = num * 500;
+    } else {
+        alert("vui lòng nhập lại dữ liệu")
+    }
+    document.write("giá cước sử dụng điện là: " + cuocDien + " vnđ");
+</script>
+</body>
+</html>

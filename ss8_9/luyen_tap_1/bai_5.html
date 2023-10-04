@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>học lực</title>
+</head>
+<body>
+<!--Xếp hạng học lực của học sinh dựa trên các điểm bài kiểm tra, điểm thi giữa kỳ, điểm thi cuối kỳ.-->
+<!--cuối kì x 2, thang điểm 10, 8->10: A; 6-8: B; 4-6: C; < 4: E.  -->
+<script>
+    let a = +prompt("nhập điểm kiểm tra");
+    let b = +prompt("nhập điểm giữa kỳ ");
+    let c = +prompt("nhập điểm cuối kỳ ");
+    let avg = (a + b + c * 2) / 4;
+    if (a >= 0 && b >= 0 && c >= 0 && a <= 10 && b <= 10 && c <= 10) {
+        if (avg >= 8) {
+            document.write("đạt loại A");
+        } else if (avg >= 6) {
+            document.write("đạt loại B");
+        } else if (avg >= 4) {
+            document.write("đạt loại C");
+        } else {
+            document.write("đạt loại E");
+        }
+    } else
+        document.write("nhập sai dữ liệu");
+</script>
+</body>
+</html>

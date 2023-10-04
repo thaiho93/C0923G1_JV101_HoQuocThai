@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title> tính hoa hồng </title>
+</head>
+<body>
+<!--Tính hoa hồng nhận được tuỳ theo mức doanh số bán hàng.-->
+<!--trên 50tr 25%-->
+<!--trên 25tr 20%-->
+<!--trên 10tr 10%-->
+<!--dưới 10tr Warning + 0%-->
+<script>
+    let commission = +prompt("nhập doanh thu (triệu đồng)");
+    if (commission >= 50) {
+        document.write("hoa hồng là: " + commission * 0.25 + " triệu đồng");
+    } else if (commission >= 25) {
+        document.write("hoa hồng là: " + commission * 0.2 + " triệu đồng");
+    } else if (commission >= 10) {
+        document.write("hoa hồng là: " + commission * 0.1 + " triệu đồng");
+    } else if (commission > 0) {
+        document.write("bạn bị thiếu số, không có hoa hồng");
+    } else {
+        alert("làm ơn nhập số dương");
+    }
+</script>
+</body>
+</html>
