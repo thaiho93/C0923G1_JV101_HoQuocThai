@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>max number</title>
+</head>
+<body>
+<script>
+    function findMaxNumber(n) {
+        if (n >= 1000 && n <= 9999) {
+            let numberString = n.toString();
+            let maxNumber = -1; // Khởi tạo maxNumber với giá trị ban đầu là -1
+
+            for (let i = 0; i < numberString.length; i++) {
+                let currentNumber = +(numberString.slice(0, i) + numberString.slice(i + 1));
+                if (currentNumber > maxNumber) {
+                    maxNumber = currentNumber;
+                }
+            }
+
+            return maxNumber;
+        } else {
+            return -1;
+        }
+    }
+
+    let n = +prompt("Nhập số có 4 chữ số:");
+    let result = findMaxNumber(n);
+
+    if (result === -1) {
+        document.write("Không hợp lệ, nhập lại số có 4 chữ số.");
+    } else {
+        document.write("Số có giá trị nhất sau khi xóa một chữ số: " + result);
+    }
+</script>
+
+</body>
+</html>

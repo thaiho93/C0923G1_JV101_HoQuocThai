@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Mảng</title>
+</head>
+<body>
+<script>
+    let arrayA = [];
+    let arrayB = [];
+    let a = +prompt("nhập độ dài mảng A");
+    let b = +prompt("nhập độ dài mảng B");
+    for (let i = 0; i < a; i++) {
+        arrayA[i] = +prompt("nhập phần tử thứ: " + i);
+    }
+    for (let i = 0; i < b; i++) {
+        arrayB[i] = +prompt("nhập phần tử thứ: " + i);
+    }
+    document.write("Mảng A là: " + arrayA + "<br>");
+    document.write("Mảng B là: " + arrayB + "<br>");
+
+    // let arrayC = [];
+    // let count = 0; // Số lượng phần tử khác nhau
+    // for (let i = 0; i < b; i++) {
+    //     if (arrayA.indexOf(arrayB[i]) === -1) { // Kiểm tra xem phần tử từ mảng B có trong mảng A không
+    //         arrayC[count] = arrayB[i];
+    //         count++;
+    //     }
+    // }
+    // document.write("Các phần tử khác nhau giữa hai mảng là: " + arrayC);
+
+    let arrayC = [];
+    let count = 0; // Số lượng phần tử khác nhau
+    let found = false;
+
+    // Kiểm tra từng phần tử của mảng B
+    for (let i = 0; i < b; i++) {
+        found = false;
+
+        // So sánh với từng phần tử của mảng A
+        for (let j = 0; j < a; j++) {
+            if (arrayB[i] === arrayA[j]) {
+                found = true;
+                break;
+            }
+        }
+
+        // Nếu không tìm thấy phần tử này trong mảng A, thêm vào mảng C
+        if (!found) {
+            arrayC[count] = arrayB[i];
+            count++;
+        }
+    }
+
+    document.write("Các phần tử khác nhau giữa hai mảng là: " + arrayC);
+</script>
+
+</body>
+</html>

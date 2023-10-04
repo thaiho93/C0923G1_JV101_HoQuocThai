@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Kiểm tra tam giác vuông</title>
+</head>
+<body>
+<script>
+    let canhGV1 = +prompt("nhập độ dài cạnh góc vuông 1");
+    let canhGV2 = +prompt("nhập độ dài cạnh góc vuông 2");
+    let canhHuyen = +prompt("nhập độ dài cạnh huyền");
+    if (canhGV1 < 0 && canhGV2 < 0 && canhHuyen < 0) {
+        alert(" nhập sai dữ liệu ");
+    } else if (canhGV1 === canhGV2 && canhHuyen * canhHuyen === canhGV1 * canhGV1 + canhGV2 * canhGV2) {
+        alert(" tam giác đã cho là tam giác vuông cân");
+    } else {
+        alert(" ko phải tam giác vuông cân");
+    }
+
+</script>
+</body>
+</html>

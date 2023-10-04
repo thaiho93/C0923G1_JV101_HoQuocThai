@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Ứng dụng máy tính</title>
+</head>
+<body>
+<h1> Calculator </h1>
+<input type="number" id="numberA"> <input type="number" id="numberB">
+<br> <br>
+<button onclick="add()">Add</button>
+<button onclick="sub()">Sub</button>
+<button onclick="mul()">Mul</button>
+<button onclick="div()">Div</button>
+<button onclick="onReset()">Clear</button>
+<p id="result"></p>
+<script>
+    function add() {
+        let numberA = +document.getElementById("numberA").value;
+        let numberB = +document.getElementById("numberB").value;
+        let resultNumber = numberA + numberB;
+        document.getElementById("result").innerText = resultNumber;
+
+    }
+
+    function sub() {
+        let numberA = +document.getElementById("numberA").value;
+        let numberB = +document.getElementById("numberB").value;
+        let resultNumber = numberA - numberB;
+        document.getElementById("result").innerText = resultNumber;
+    }
+
+    function mul() {
+        let numberA = +document.getElementById("numberA").value;
+        let numberB = +document.getElementById("numberB").value;
+        let resultNumber = numberA * numberB;
+        document.getElementById("result").innerText = resultNumber;
+    }
+
+    function div() {
+        let numberA = +document.getElementById("numberA").value;
+        let numberB = +document.getElementById("numberB").value;
+        let resultNumber = numberA / numberB;
+        document.getElementById("result").innerText = resultNumber;
+    }
+
+    function onReset() {
+        document.getElementById("numberA").value = "";
+        document.getElementById("numberB").value = "";
+        document.getElementById("result").innerText = "";
+    }
+</script>
+
+</body>
+</html>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Tìm số thứ 2023</title>
+</head>
+<body>
+<script>
+    let array = [];
+    array[0] = 50;
+    array[1] = 51;
+
+    for (let i = 2; i < 2023; i++) {
+        array[i] = array[i - 1] + i;
+    }
+    document.write("phần tử thứ 2023 là " + array[2022]);
+
+    // let array = [];
+    // array[0] = 50;
+    // array[1] = 51;
+    //
+    // for (let i = 2; i <= 2023; i++) {
+    //     array[i] = array[i - 1] + i;
+    // }
+    //
+    // document.write("Phần tử thứ 2023 trong mảng là: " + array[2023]);
+</script>
+
+</body>
+</html>

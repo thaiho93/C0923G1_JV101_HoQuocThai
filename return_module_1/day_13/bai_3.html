@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>bài 3</title>
+</head>
+<body>
+<!--Viết chương trình nhập các phần tử cho mảng sao cho không có phần tử nào trùng nhau.-->
+<!--Nếu phần tử nào trùng thì yêu cầu nhập lại-->
+<script>
+    let array = [];
+    let length = +prompt("nhập độ dài của mảng");
+    for (let i = 0; i < length; i++) {
+        let duplicate = true;
+        while (duplicate) {
+            let element = +prompt("Nhập phần tử thứ " + i);
+            // Kiểm tra xem phần tử đã tồn tại trong mảng chưa
+            if (array.indexOf(element) === -1) {
+                array[i] = element;
+                duplicate = false; // Không trùng, thoát khỏi vòng lặp
+            } else {
+                alert("Phần tử đã trùng, hãy nhập lại."); // Trùng, yêu cầu nhập lại
+            }
+        }
+    }
+
+    // In mảng đã nhập
+    document.write("Mảng đã nhập: " + array);
+
+</script>
+</body>
+</html>

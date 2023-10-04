@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>bài 2</title>
+</head>
+<body>
+<script>
+    let array = [];
+    let row = +prompt("nhập số hàng của matrix");
+    let col = +prompt("nhập số cột của matrix");
+    for (let i = 0; i < row; i++) {
+        array[i] = [];
+        for (let j = 0; j < col; j++) {
+            array[i][j] = +prompt(" nhập phần thử thứ " + i + " và " + j);
+        }
+    }
+
+    for (let i = 0; i < row; i++) {
+        for (let j = 0; j < col; j++) {
+            document.write(array[i][j] + " ");
+        }
+        document.write("<br>");
+    }
+    let mainDiagonalSum = 0;
+    for (let i = 0; i < array.length; i++) {
+        mainDiagonalSum += array[i][i];
+    }
+
+    let secondaryDiagonalSum = 0;
+    for (let i = 0; i < array.length; i++) {
+        secondaryDiagonalSum += array[i][array.length - 1 - i];
+    }
+
+    document.write("Tổng đường chéo chính: " + mainDiagonalSum + "<br>");
+    document.write("Tổng đường chéo phụ: " + secondaryDiagonalSum + "<br>");
+
+</script>
+</body>
+</html>

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>vẽ tam giác cân</title>
+</head>
+<body>
+<script>
+    let h = +prompt("nhập chiều cao tam giác");
+    debugger;
+    for (i = 0; i < h; i++) {
+        for (j = 0; j < (2 * h - 1); j++) {
+            if (j >= h - 1 - i && j <= h - 1 + i) {
+                document.write("*");
+            } else {
+                if (j === (2 * h - 2)) {
+                    document.write("&nbsp&nbsp" + "<br>");
+                } else {
+                    document.write("&nbsp&nbsp");
+                }
+            }
+        }
+    }
+</script>
+
+</body>
+</html>

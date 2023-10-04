@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>tìm min , max </title>
+</head>
+<body>
+<script>
+    let arr = [];
+    let row = +prompt("nhập số dòng mảng");
+    let col = +prompt("nhập số cột mảng");
+
+    for (let i = 0; i < row; i++) {
+        arr[i] = [];
+        for (let j = 0; j < col; j++) {
+            arr[i][j] = +prompt("nhập phần tử vị trí thứ: " + i + "," + j);
+        }
+    }
+    console.log(arr);
+    min = minMatrix();
+    max = maxMatrix();
+    document.write("max là: " + max + " và min là: " + min);
+
+    function maxMatrix() {
+        let max = arr[0][0];
+        for (let i = 0; i < arr.length; i++) {
+            for (let j = 0; j < arr[i].length; j++) {
+                if (max < arr[i][j]) {
+                    max = arr[i][j];
+                }
+            }
+        }
+        return max;
+    }
+
+    function minMatrix() {
+        let min = arr[0][0];
+        for (let i = 0; i < arr.length; i++) {
+            for (let j = 0; j < arr[i].length; j++) {
+                if (min > arr[i][j]) {
+                    min = arr[i][j];
+                }
+            }
+        }
+        return min;
+    }
+
+
+
+
+</script>
+
+</body>
+</html>

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Đổi tiền</title>
+</head>
+<body>
+<input type="number" id="usd" placeholder="nhập số USD" style="width: 200px">
+<br> <br>
+<input type="number" id="jpy" placeholder="nhập số JPY" style="width: 200px">
+<br> <br>
+<input type="number" id="rmb" placeholder="nhập số RMB" style="width: 200px">
+<br> <br>
+<input type="number" id="gbp" placeholder="nhập số GPB" style="width: 200px">
+<br> <br>
+<input type="number" id="vnd" placeholder="nhập số VND" style="width: 200px">
+<br> <br>
+<button onclick="changeToVND()">Đổi sang VND</button>
+<button onclick="vndChangeTo()">VND sang ngoại tệ</button>
+<button onclick="onReset()"> Reset</button>
+
+<div id="result1"></div>
+<div id="result2"></div>
+
+<script>
+    function changeToVND() {
+        let usd = document.getElementById("usd").value;
+        let jpy = document.getElementById("jpy").value;
+        let rmb = document.getElementById("rmb").value;
+        let gbp = document.getElementById("gbp").value;
+        let vnd = usd * 23500 + jpy * 180 + rmb * 3500 + gbp * 32000;
+        document.getElementById("result1").innerText = "Số tiền VND: " + vnd;
+    }
+
+    function vndChangeTo() {
+        let vnd = document.getElementById("vnd").value;
+        let usd = vnd / 23500;
+        let jpy = vnd / 180;
+        let rmb = vnd / 3500;
+        let gbp = vnd / 32000;
+        document.getElementById("result2").innerText = "USD: " + usd.toFixed(1) +
+            "\nJPY: " + jpy.toFixed(1) +
+            "\nRMB: " + rmb.toFixed(1) +
+            "\nGBP: " + gbp.toFixed(1);
+    }
+
+    function onReset() {
+        document.getElementById("result1").innerText = "";
+        document.getElementById("result2").innerText = "";
+    }
+</script>
+
+</body>
+</html>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>bài 1</title>
+</head>
+<body>
+<script>
+    // Tính tổng các phần tử chẵn và ở vị trí lẻ
+    let array = [];
+    let length = +prompt(" nhập độ dài của mảng");
+    for (let i = 0; i < length; i++) {
+        array[i] = +prompt(" nhập số bạn muốn");
+    }
+    document.write(" mảng đã nhập là: " + array + "<br>");
+    let sum = 0;
+
+    for (let i = 0; i < array.length; i++) {
+        if (array[i] % 2 === 0 && i % 2 === 1) {
+            sum += array[i];
+        }
+    }
+    document.write("tổng các phần tử chẵn và ở vị trí lẻ là: "+ sum);
+
+
+</script>
+
+</body>
+</html>

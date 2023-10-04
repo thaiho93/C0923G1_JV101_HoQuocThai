@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>kiểm tra </title>
+</head>
+<body>
+<script>
+    function checkArray(arr) {
+        let isNumber = false;
+        let isCharacter = false;
+
+        for (let i = 0; i < arr.length; i++) {
+            // Kiểm tra xem ký tự có phải là số không
+            if (!isNaN(arr[i])) {
+                isNumber = true;
+            }
+            // Kiểm tra xem ký tự có phải là chữ không
+            else if (arr[i].match(/[a-zA-Z]/)) {
+                isCharacter = true;
+            }
+        }
+
+        // Nếu chỉ có số, trả về 1
+        if (isNumber && isCharacter) {
+            return -1;
+        }
+        // Nếu chỉ có chữ, trả về 0
+        else if (isCharacter) {
+            return 0;
+        }
+        // Nếu vừa có số vừa có chữ, trả về -1 (đã kiểm tra ở trên)
+        else {
+            return 1;
+        }
+    }
+
+    let array = [];
+    let length = +prompt("Nhập độ dài của mảng");
+    for (let i = 0; i < length; i++) {
+        array[i] = prompt("Nhập phần tử thứ " + i);
+    }
+
+    let result = checkArray(array);
+    document.write("Kết quả: " + result);
+</script>
+
+</body>
+</html>

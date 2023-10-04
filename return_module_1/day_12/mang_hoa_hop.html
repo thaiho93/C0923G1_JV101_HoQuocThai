@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>mảng hòa hợp</title>
+</head>
+<body>
+<script>
+    let array = [];
+    let n = +prompt("nhập số luơng phần tử của mảng");
+    for (let i = 0; i < n; i++) {
+        array[i] = +prompt("nhập phần tử thứ " + i);
+    }
+    document.write(array + "<br>");
+    if (n % 2 === 0) {
+        document.write("OK");
+    } else
+        document.write("NO");
+</script>
+
+</body>
+</html>

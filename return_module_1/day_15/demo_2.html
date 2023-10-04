@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<!--So sánh xem các phần tử có đối xứng ko?-->
+<script>
+    let array = [];
+    let length = +prompt("nhập độ dài mảng");
+    for (i = 0; i < length; i++) {
+        array[i] = prompt("nhập phần tử thứ " + i);
+    }
+    document.write(array + "<br>");
+
+    for (i = 0; i < array.length; i++) {
+        if (array[i] === array[array.length - 1 - i]) {
+            document.write(" mảng đối xứng");
+            break;
+        } else {
+            document.write("mảng không đối xứng");
+            break;
+        }
+    }
+</script>
+
+</body>
+</html>

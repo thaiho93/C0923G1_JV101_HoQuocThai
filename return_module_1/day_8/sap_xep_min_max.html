@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>sắp xếp số</title>
+</head>
+<body>
+<script>
+    let array = [3, 5, 2, 4];
+    let max = array[0];
+    let min = array[0];
+    for (let i = 0; i < array.length; i++) {
+        if (array[i] > max) {
+            max = array[i];
+        }
+    }
+    for (let j = 0; j < array.length; j++) {
+        if (array[j] < min) {
+            min = array[j];
+        }
+    }
+    document.write("max là: " + max + "<br>");
+    document.write(" min là: " + min + "<br>");
+
+    document.write("sắp xếp tăng dần: " + array.sort((a, b) => (a - b)) + "<br>");
+    document.write("sắp xếp tăng dần: " + array.sort((a, b) => (b - a)) + "<br>");
+
+</script>
+
+</body>
+</html>

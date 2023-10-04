@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>hiển thị số chính phương</title>
+</head>
+<body>
+<script>
+    let array = [];
+    let n = +prompt(" nhập số lượng phần tử của mảng");
+    for (let i = 0; i < n; i++) {
+        array[i] = +prompt(" nhập phần tử thứ " + i);
+    }
+    document.write(array + "<br>");
+
+    function isPerfectSquare(number) {
+        return number > 0 && Math.sqrt(number) % 1 === 0;
+    }
+
+    for (let i = 0; i < array.length; i++) {
+        if (isPerfectSquare(array[i])) {
+            document.write(array[i] + " ");
+        }
+    }
+    document.write("Các số chính phương trong mảng: ");
+
+</script>
+
+</body>
+</html>

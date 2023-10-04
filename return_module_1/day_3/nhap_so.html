@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Nhập số</title>
+</head>
+<body>
+<script>
+    let age = +prompt("nhập số tuổi bạn muốn");
+    do {
+        if (age <= 50) {
+            age = +prompt("nhập lại tuổi");
+        } else {
+            document.write(" Bạn đã nhập đúng số tuổi");
+            break;
+        }
+    } while (true)
+</script>
+</body>
+</html>

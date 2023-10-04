@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>tạo mảng B</title>
+</head>
+<body>
+<script>
+    let arrayA = [];
+    let arrayB = [];
+    let n = +prompt("Nhập độ dài mảng A");
+    for (let i = 0; i < n; i++) {
+        arrayA[i] = +prompt("Nhập phần tử thứ " + i);
+    }
+    document.write("Mảng A: " + arrayA + "<br>");
+
+    function prefixSums(a) {
+        let sum = 0;
+        for (let i = 0; i <= a; i++) { // Sửa lỗi: thay arrayA[i] thành a, và chạy từ 0 đến a, không phải arrayA.length
+            sum += arrayA[i];
+        }
+        return sum;
+    }
+
+    for (let i = 0; i < arrayA.length; i++) {
+        arrayB[i] = prefixSums(i);
+    }
+    document.write("Mảng B: " + arrayB);
+</script>
+
+</body>
+</html>

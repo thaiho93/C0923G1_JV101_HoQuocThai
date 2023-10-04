@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Tuổi cha và con</title>
+</head>
+<body>
+<script>
+    let ageDad = +prompt(" nhập tuổi của cha");
+    let ageSon = +prompt(" nhập tuổi của con");
+    let count = 0;
+    while (ageDad > 0 && ageSon > 0 && ageDad >= ageSon + 25) {
+        ageDad++;
+        ageSon++;
+        count++;
+        if (ageDad === 2 * ageSon) {
+            alert("số năm sau tuổi cha gấp đôi con là: " + count + " năm");
+            break;
+        }
+    }
+</script>
+
+</body>
+</html>
