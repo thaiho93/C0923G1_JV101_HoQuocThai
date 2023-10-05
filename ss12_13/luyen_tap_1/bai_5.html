@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<!--Viết chương trình đếm số "nguyên âm" trong một chuỗi-->
+<script>
+    let array = [];
+    let str = prompt("nhập chuỗi bạn muốn");
+    array = str.split("");
+    document.write("mảng ban đầu là: " + array + "<br>");
+    let arrayNguyenAm = ["u", "e", "o", "a", "i"];
+    let count = 0;
+    for (let i = 0; i < array.length; i++) {
+        for (let j = 0; j < arrayNguyenAm.length; j++) {
+            if (array[i] === arrayNguyenAm[j]) {
+                count++;
+            }
+        }
+    }
+    document.write("số nguyên âm là: " + count);
+</script>
+</body>
+</html>

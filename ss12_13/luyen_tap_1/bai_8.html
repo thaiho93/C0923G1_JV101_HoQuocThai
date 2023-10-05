@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<!--Viết chương trình khởi tạo/nhập vào một mảng số nguyên gồm 10 phần tử.-->
+<!--Chương trình sắp xếp mảng theo thứ tự giảm dần và hiển thị ra mảng đã được sắp xếp.-->
+<script>
+    let array = [];
+    for (let i = 0; i < 10; i++) {
+        array[i] = +prompt("nhập vào phần tử thứ " + i);
+    }
+    document.write("mảng theo thứ tự giảm dần: " + array.sort((a, b) => b - a));
+</script>
+</body>
+</html>

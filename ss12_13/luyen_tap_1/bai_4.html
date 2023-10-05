@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<!--Viết chương trình khởi tạo/nhập vào một mảng số nguyên và đảo ngược các phần tử trong mảng đó.-->
+<script>
+    let array = [];
+    let array2 = [];
+    let soLuong = +prompt("nhập độ dài mảng");
+    for (let i = 0; i < soLuong; i++) {
+        array[i] = +prompt("nhập phần tử thứ " + i);
+    }
+    document.write("mảng ban đầu là: " + array + "<br>");
+
+    for (let i = array.length - 1; i >= 0; i--) {
+        array2[array.length - i - 1] = array[i];
+    }
+    document.write("mảng sau khi đảo ngược là: " + array2 + "<br>");
+
+    // dùng hàm đảo cho lẹ:
+    document.write("mảng đảo ngược là: " + array.reverse());
+
+</script>
+</body>
+</html>

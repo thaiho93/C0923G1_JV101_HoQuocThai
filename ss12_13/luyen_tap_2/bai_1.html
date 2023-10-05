@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<!--Viết chương trình khởi tạo mảng 2 chiều, gồm một bộ các phần tử có sẵn,-->
+<!--in ra các phần tử trong mảng. Chú ý: Sử dụng vòng lặp for lồng nhau-->
+<script>
+    let array = [];
+    let row = +prompt("nập số hàng của matrix");
+    let col = +prompt("nập số cột của matrix");
+    for (let i = 0; i < row; i++) {
+        array[i] = [];
+        for (let j = 0; j < col; j++) {
+            array[i][j] = +prompt("nhập phần tử thứ " + i + " và " + j);
+        }
+    }
+    console.log(array);
+    for (let i = 0; i < row; i++) {
+        for (let j = 0; j < col; j++) {
+            document.write(array[i][j] + "&nbsp&nbsp");
+        }
+        document.write("<br>");
+    }
+</script>
+</body>
+</html>

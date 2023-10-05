@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>hiển thị dãy fibonacci</title>
+</head>
+<body>
+<!--Hiển thị ra 20 số trong dãy fibonacci đầu tiên.-->
+<script>
+    let n = parseInt(prompt("nhập số lượng của dãy fibonacci bạn muốn in ra"));
+    let fibo1 = 0;
+    let fibo2 = 1;
+    document.write(fibo1 + "<br>");
+    document.write(fibo2 + "<br>");
+    for (let i = 2; i < n; i++) {
+        let fiboNext = fibo1 + fibo2;
+        fibo1 = fibo2;
+        fibo2 = fiboNext;
+        document.write(fiboNext + "<br>");
+    }
+</script>
+</body>
+</html>

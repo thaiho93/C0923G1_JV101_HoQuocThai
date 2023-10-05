@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>tính tổng dãy fibonacci</title>
+</head>
+<body>
+<!--Tính tổng của 20 số đầu tiên trong dãy fibonacci.-->
+<script>
+    let n = parseInt(prompt("nhập số lượng số bạn muốn tính tổng của dãy fibonacci"));
+    let fibo1 = 0;
+    let fibo2 = 1;
+    let sum = 1;
+    for (let i = 2; i < n; i++) {
+        let fiboNext = fibo1 + fibo2;
+        fibo1 = fibo2;
+        fibo2 = fiboNext;
+        sum += fiboNext;
+    }
+    document.write("tổng là: " + sum);
+</script>
+</body>
+</html>

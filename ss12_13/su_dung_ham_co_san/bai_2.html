@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<!--Viết một chương trình nhận một số nhập vào và chèn dấu (-) giữa 2  số chẵn.-->
+<!--Ví dụ nếu bạn nhập vào 025468 thì kết quả của chương trình sẽ là 0-254-6-8.-->
+<script>
+    let num = +prompt("nhập dãy số bạn muốn");
+    let arr = num.toString();
+    let result = [arr[0]];
+
+    for (let x = 1; x < arr.length; x++) {
+        if ((arr[x - 1] % 2 === 0) && (arr[x] % 2 === 0)) {
+            result.push('-', arr[x]);
+        } else {
+            result.push(arr[x]);
+        }
+    }
+    document.write(result.join(''));
+</script>
+</body>
+</html>

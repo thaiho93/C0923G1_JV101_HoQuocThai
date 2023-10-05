@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>tổng số chia hết cho 7</title>
+</head>
+<body>
+<script>
+    let n = parseInt(prompt("nhập số lượng số bạn muốn tính tổng"));
+    let count = 0;
+    let num = 0;
+    let sum = 0;
+    while (count < n) {
+        if (num % 7 === 0) {
+            sum += num;
+            count++;
+        }
+        num++;
+    }
+    document.write("tổng là: " + sum);
+</script>
+
+</body>
+</html>

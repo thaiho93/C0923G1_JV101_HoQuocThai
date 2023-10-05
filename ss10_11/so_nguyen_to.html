@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>hiển thị số nguyên tố</title>
+</head>
+<body>
+<script>
+    // let n = parseInt(prompt("nhập số lượng số nguyên tố bạn muốn hiển thị"));
+    // let count = 0;
+    // let num = 2;
+    //
+    // function checkPrime(num) {
+    //     for (let i = 2; i < num; i++) {
+    //         if (num % i === 0) {
+    //             return false;
+    //         }
+    //     }
+    //     return num !== 1;
+    // }
+    //
+    // while (count < n) {
+    //     if (checkPrime(num)) {
+    //         document.write(num + "<br>");
+    //         count++;
+    //     }
+    //     num++;
+    // }
+
+    let soLuong = +prompt("nhập số lượng số nguyên tố");
+    let num = 2;
+    let dem = 0;
+    do {
+        let count = 0;
+        for (let i = 1; i <= num; i++) {
+            if (num % i === 0) {
+                count++;
+            }
+        }
+        if (count === 2) {
+            document.write(num + "<br>");
+            dem++;
+        }
+        num++;
+    } while (dem < soLuong);
+</script>
+
+
+</body>
+</html>
