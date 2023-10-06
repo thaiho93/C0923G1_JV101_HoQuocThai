@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>demo2</title>
+</head>
+<body>
+<!--Cho người tạo ra mảng 1 chiều với kích thước bất kỳ. Sắp xếp mảng theo chiều tăng dần-->
+<script>
+    let array = [];
+    let length = +prompt("nhập độ dài mảng");
+    for (let i = 0; i < length; i++) {
+        array[i] = +prompt("nhập phần tử của mảng");
+    }
+    // document.write(array.sort((a, b) => b - a));
+
+    // for (let i = 0; i < array.length; i++) {
+    //     // để a[0] rồi so sánh
+    //     for (let j = i + 1; j < array.length ; j++) {
+    //         if (array[i] > array[j]) {
+    //             //hoán đổi vị trí 2 số
+    //             let temp = array[i]
+    //             array[i] = array[j];
+    //             array[j] = temp;
+    //         }
+    //     }
+    // }
+
+    for (let i = 0; i < array.length; i++) {
+        for (let j = 0; j < array.length - 1; j++) {
+            if (array[j] > array[j + 1]) {
+                // hoán đổi 2 số liền nhau
+                let temp = array[j];
+                array[j] = array[j + 1];
+                array[j + 1] = temp;
+            }
+        }
+    }
+
+    document.write("mảng sau khi sắp xếp " + array);
+
+</script>
+</body>
+</html>

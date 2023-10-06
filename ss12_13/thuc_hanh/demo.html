@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>demo1</title>
+</head>
+<body>
+<!--Tạo 1 mảng 2 chiều có kích thước m nhân n do người dùng nhập vào-->
+<!--Tính tổng các cột chẵn ở mảng tạo ra ở câu 1-->
+<!--Tìm số lớn nhất, bé nhất trong mảng tạo ra ở câu 1.-->
+<script>
+    let array = [];
+    let m = +prompt("nhập số hàng");
+    let n = +prompt("nhập số cột");
+    for (let i = 0; i < m; i++) {
+        array[i] = [];
+        for (let j = 0; j < n; j++) {
+            array[i][j] = +prompt("nhập phần tử ở vị trí " + i + " và " + j);
+        }
+    }
+    let sum = 0;
+    for (let i = 0; i < array.length; i++) {
+        for (let j = 0; j < array[i].length; j++) {
+            if (j % 2 === 0) {
+                sum += array[i][j];
+            }
+        }
+    }
+    document.write("tổng là: " + sum + "<br>");
+
+    let max = array[0][0];
+    let min = array[0][0];
+    for (let i = 0; i < array.length; i++) {
+        for (let j = 0; j < array[i].length; j++) {
+            if (max < array[i][j]) {
+                max = array[i][j];
+            }
+        }
+    }
+    for (let i = 0; i < array.length; i++) {
+        for (let j = 0; j < array[i].length; j++) {
+            if (min > array[i][j]) {
+                min = array[i][j];
+            }
+        }
+    }
+    document.write("max là: " + max + " và min là: " + min);
+
+</script>
+</body>
+</html>

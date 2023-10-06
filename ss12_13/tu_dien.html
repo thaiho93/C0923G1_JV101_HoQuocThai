@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Từ Điển</title>
+</head>
+<body>
+<label><input type="text" id="word" placeholder="nhập từ"></label>
+<button type="button" onclick="trans()">Translate</button>
+<br>
+<div id="result"></div>
+<script>
+    let eng = ["banana", "apple", "car", "motobike", "pencil", "house", "umbrella"];
+    let vie = ["chuối", "táo", "ô tô", "mô tô", "bút chì", "nhà", "dù"];
+
+    function trans() {
+        let word = document.getElementById("word").value;
+        let result;
+        let check = false;
+        for (let i = 0; i < eng.length; i++) {
+            if (word === eng[i]) {
+                console.log(eng[i], word)
+                check = true;
+                result = vie[i];
+                break;
+            }
+        }
+        if (check === true) {
+            document.getElementById("result").innerHTML = result;
+        } else {
+            document.getElementById("result").innerHTML = "Không tìm thấy từ trong từ điển.";
+        }
+    }
+</script>
+</body>
+</html>

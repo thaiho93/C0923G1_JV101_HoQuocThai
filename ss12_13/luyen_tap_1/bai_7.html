@@ -16,13 +16,14 @@
     let num = +prompt("nhập số V");
     for (let i = 0; i < array.length; i++) {
         if (num === array[i]) {
-            for (j = 0; j < array.length - 2; j++) {
+            for (let j = 0; j < array.length - 2; j++) {
                 array[j] = array[j + 1];
             }
         }
         array[length - 1] = 0;
     }
     document.write(array);
+
 </script>
 </body>
 </html>
