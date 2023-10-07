@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<!--Viết hàm tính diện tích, hàm tính chu vi hình tròn. Gọi hàm vừa xây dựng được-->
+<script>
+    function acreage(radius) {
+        return radius * radius * 3.14;
+    }
+
+    function perimeter(radius) {
+        return radius * 2 * 3.14;
+    }
+
+    let r = +prompt("nhập bán kính hình tròn");
+    let result1 = acreage(r);
+    let result2 = perimeter(r);
+    document.write("diện tích hình tròn là: " + result1 + " chu vi hình tròn là: " + result2);
+</script>
+
+</body>
+</html>

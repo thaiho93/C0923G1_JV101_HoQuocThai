@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>đổi ft và met</title>
+</head>
+<body>
+<script>
+    // Chuyển đổi từ feet sang meters:
+
+    function footToMeter(foot) {
+        let met;
+        return met = foot * 0.305;
+    }
+
+    // Chuyển đổi từ meters sang feet:
+
+    function meterToFoot(meter) {
+        let ft;
+        return ft = meter * 3.279
+    }
+
+    let m = +prompt("nhập số met muốn đôỉ");
+    let ft = +prompt("nhập số feet muốn đôỉ");
+
+    result1 = footToMeter(m);
+    result2 = meterToFoot(ft);
+    document.write(m + " met đổi ra ft là: " + result1 + "<br>");
+    document.write(ft + " feet đổi ra m là: " + result2);
+</script>
+</body>
+</html>

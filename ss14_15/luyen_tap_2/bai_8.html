@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<!--Viết hàm truyền vào mảng số nguyên bất kỳ, sau đó đảo ngược mảng số nguyên đó.-->
+<script>
+    function reverseArray() {
+        let array = [];
+        let length = +prompt("nhập độ dài mảng");
+        for (let i = 0; i < length; i++) {
+            array[i] = +prompt("nhập phần tử số nguyên bạn muốn ");
+        }
+
+        // let newArray = [];
+        // let j = 0;
+        // for (let i = array.length - 1; i >= 0; i--) {
+        //     newArray[j] = array[i];
+        //     j++;
+        // }
+
+        for (let i = 0; i < (array.length - 1) / 2; i++) {
+            let temp = array[i];
+            array[i] = array[array.length - 1 - i];
+            array[array.length - 1 - i] = temp;
+        }
+        // document.write("mảng sau khi đảo ngược là: " + newArray);
+        document.write("mảng sau khi đảo là: " + array);
+    }
+
+    reverseArray();
+</script>
+</body>
+</html>

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<!--Viết hàm nhận vào 3 số nguyên bất kỳ, trả về số nguyên có giá trị nhỏ nhất.-->
+<script>
+    function minNumber() {
+        let number1 = +prompt("nhập số thứ 1");
+        let number2 = +prompt("nhập số thứ 2");
+        let number3 = +prompt("nhập số thứ 3");
+        let min = number1;
+        if (min > number2 && number3 > number2) {
+            min = number2;
+        } else if (min > number3 && number3 < number2) {
+            min = number3;
+        } else {
+            min;
+        }
+        document.write("min là: " + min);
+    }
+    minNumber();
+</script>
+</body>
+</html>
