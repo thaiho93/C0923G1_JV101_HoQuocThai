@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let numerators = [5, 2, 5, 7, 8, 9];
+    let denominators = [6, 3, 4, 6, 9, 8];
+    let max = numerators[0] / denominators[0];
+    let count = 0;
+    for (let i = 0; i < numerators.length; i++) {
+        if (numerators[i] / denominators[i] > max) {
+            max = numerators[i] / denominators[i];
+            count = i;
+        }
+    }
+    document.write("max là: " + numerators[count] + "/" + denominators[count] + " và ở vị trí thứ " + count)
+</script>
+</body>
+</html>

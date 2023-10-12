@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let str1 = prompt("nhập chuỗi kí tự thứ nhất");
+    let str2 = prompt("nhập chuỗi kí tự thứ hai");
+    let array1 = str1.split("");
+    let array2 = str2.split("");
+    document.write(array1 + "<br>");
+    document.write(array2 + "<br>");
+
+    let count = 0;
+
+    for (let i = 0; i < array1.length; i++) {
+        for (let j = 0; j < array2.length; j++) {
+            if (array1[i] === array2[j]) {
+                document.write(array1[i] + "");
+                count++;
+                break;
+            }
+        }
+    }
+    document.write("<br>");
+    document.write("Số lượng ký tự chung là: " + count);
+
+</script>
+</body>
+</html>

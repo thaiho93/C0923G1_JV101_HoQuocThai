@@ -7,20 +7,17 @@
 <body>
 <script>
     let h = +prompt("nhập chiều cao tam giác");
-    debugger;
-    for (i = 0; i < h; i++) {
-        for (j = 0; j < (2 * h - 1); j++) {
-            if (j >= h - 1 - i && j <= h - 1 + i) {
+    // in * khi -i <= j <= i
+    for (let i = 0; i < h; i++) {
+        for (let j = -(h - 1); j < h; j++) {
+            if (j >= -i && j <= i) {
                 document.write("*");
-            } else {
-                if (j === (2 * h - 2)) {
-                    document.write("&nbsp&nbsp" + "<br>");
-                } else {
-                    document.write("&nbsp&nbsp");
-                }
-            }
+            } else
+                document.write("&nbsp&nbsp");
         }
+        document.write("<br>");
     }
+
 </script>
 
 </body>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>In dãy Fibonaci</title>
+</head>
+<body>
+<script>
+    let numberOfFibo = parseInt(prompt("nhập số lượng số bạn muốn in ra"));
+    let fibo1 = 0;
+    let fibo2 = 1;
+    let count = 2;
+    document.write(fibo1 + "<br>");
+    document.write(fibo2 + "<br>");
+
+    // for (let i = 2; i < number; i++) {
+    //     let fiboNext = fibo1 + fibo2;
+    //     fibo1 = fibo2;
+    //     fibo2 = fiboNext;
+    //     document.write(fiboNext + "<br>");
+    // }
+
+    while (count < numberOfFibo) {
+        let fiboNext = fibo1 + fibo2;
+        fibo1 = fibo2;
+        fibo2 = fiboNext;
+        document.write(fiboNext + "<br>");
+        count++;
+    }
+</script>
+</body>
+</html>

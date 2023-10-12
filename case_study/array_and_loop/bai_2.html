@@ -5,54 +5,41 @@
     <title>Mảng</title>
 </head>
 <body>
+<!--Cho 2 mảng A và B chứa số nguyên. Tìm ra một mảng đã được sắp xếp chứa các phần tử xuất hiện trong-->
+<!--mảng B nhưng lại không xuất hiện A-->
+<!--Chú ý các phần tử giống nhau chỉ tính là 1 lần xuất hiện-->
+
 <script>
     let arrayA = [];
     let arrayB = [];
-    let a = +prompt("nhập độ dài mảng A");
-    let b = +prompt("nhập độ dài mảng B");
-    for (let i = 0; i < a; i++) {
+    let lengthA = +prompt("nhập độ dài mảng A");
+    let lengthB = +prompt("nhập độ dài mảng B");
+    for (let i = 0; i < lengthA; i++) {
         arrayA[i] = +prompt("nhập phần tử thứ: " + i);
     }
-    for (let i = 0; i < b; i++) {
+    for (let i = 0; i < lengthB; i++) {
         arrayB[i] = +prompt("nhập phần tử thứ: " + i);
     }
     document.write("Mảng A là: " + arrayA + "<br>");
     document.write("Mảng B là: " + arrayB + "<br>");
 
-    // let arrayC = [];
-    // let count = 0; // Số lượng phần tử khác nhau
-    // for (let i = 0; i < b; i++) {
-    //     if (arrayA.indexOf(arrayB[i]) === -1) { // Kiểm tra xem phần tử từ mảng B có trong mảng A không
-    //         arrayC[count] = arrayB[i];
-    //         count++;
-    //     }
-    // }
-    // document.write("Các phần tử khác nhau giữa hai mảng là: " + arrayC);
-
     let arrayC = [];
-    let count = 0; // Số lượng phần tử khác nhau
-    let found = false;
-
-    // Kiểm tra từng phần tử của mảng B
-    for (let i = 0; i < b; i++) {
-        found = false;
-
-        // So sánh với từng phần tử của mảng A
-        for (let j = 0; j < a; j++) {
+    for (let i = 0; i < arrayB.length; i++) {
+        let found = false;
+        for (let j = 0; j < arrayA.length; j++) {
             if (arrayB[i] === arrayA[j]) {
                 found = true;
                 break;
             }
         }
-
-        // Nếu không tìm thấy phần tử này trong mảng A, thêm vào mảng C
         if (!found) {
-            arrayC[count] = arrayB[i];
-            count++;
+            // Nếu không tìm thấy trong mảng A, thêm vào mảng kết quả
+            if (!arrayC.includes(arrayB[i])) {
+                arrayC.push(arrayB[i]);
+            }
         }
     }
-
-    document.write("Các phần tử khác nhau giữa hai mảng là: " + arrayC);
+    document.write("mảng C là: " + arrayC);
 </script>
 
 </body>

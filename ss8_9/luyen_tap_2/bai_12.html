@@ -8,12 +8,12 @@
 <!--Viết chương trình tính lãi ngân hàng (lãi mẹ đẻ lãi con)-->
 <!--khi biết số tiền ban đầu, số tháng cho vay và lãi xuất hàng tháng.-->
 <script>
-    let tienGoc = +prompt("nhập số tiền bạn muốn gửi (triệu đồng)");
+    let initialMoney = +prompt("nhập số tiền bạn muốn gửi (triệu đồng)");
     let month = parseInt(prompt("nhập số tháng bạn muốn gửi"));
-    let laiSuat = +prompt("nhập lãi suất hàng tháng");
-    let tienNhan = tienGoc * Math.pow((1 + laiSuat / 100), month);
-    if (tienGoc >= 0 && month > 0 && laiSuat) {
-        document.write("số tiền bạn nhận đc sau " + month + " tháng là: " + tienNhan + " triệu vnd");
+    let interestRate = +prompt("nhập lãi suất hàng tháng");
+    let moneyReceived = initialMoney * Math.pow((1 + interestRate / 100), month);
+    if (initialMoney >= 0 && month > 0) {
+        document.write("số tiền bạn nhận đc sau " + month + " tháng là: " + moneyReceived + " triệu vnd");
     } else {
         alert("bạn nhập sai dữ liệu");
     }

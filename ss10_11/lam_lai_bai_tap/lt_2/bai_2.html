@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>tính giai thừa</title>
+</head>
+<body>
+<!--Tính giai thừa của một số nguyên dương-->
+<script>
+    let number = parseInt(prompt("nhập số"));
+    let giaiThua = 1;
+    for (let i = 1; i <= number; i++) {
+        giaiThua = giaiThua * i;
+    }
+    document.write("giai thừa của " + number + " là: " + giaiThua);
+</script>
+</body>
+</html>

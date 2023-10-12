@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Order Nước</title>
+</head>
+<body>
+<table>
+    <tr>
+        <th>Tên món </th>
+        <th>Số lượng </th>
+        <th>Giá tiền</th>
+
+    </tr>
+    <tr>
+        <td> 1.Cà phê</td>
+        <td><input type="number" id="1" placeholder="Nhập số lượng"></td>
+        <td>12k/ly</td>
+    </tr>
+    <tr>
+        <td> 2.Nước cam vắt</td>
+        <td><input type="number" id="2" placeholder="Nhập số lượng"></td>
+        <td> 18k/ly</td>
+    </tr>
+    <tr>
+        <td> 3.Nước cà rốt</td>
+        <td><input type="number" id="3" placeholder="Nhập số lượng"></td>
+        <td>18k/ly</td>
+    </tr>
+    <tr>
+        <td> 4.Nước cà chua</td>
+        <td><input type="number" id="4" placeholder="Nhập số lượng"></td>
+        <td>16k/ly</td>
+    </tr>
+    <tr>
+        <td> 5.Nước suối</td>
+        <td><input type="number" id="5" placeholder="Nhập số lượng"></td>
+        <td>10k/chai</td>
+    </tr>
+    <tr>
+        <td> 6.Nước dừa</td>
+        <td><input type="number" id="6" placeholder="Nhập số lượng"></td>
+        <td>15k/quả</td>
+    </tr>
+
+</table>
+<br>
+<button onclick="check()"> 7.Thoát gọi món, tạm tính</button>
+<div id="result"></div>
+<script>
+    function check() {
+        let one = +document.getElementById("1").value;
+        let two = +document.getElementById("2").value;
+        let three = +document.getElementById("3").value;
+        let four = +document.getElementById("4").value;
+        let five = +document.getElementById("5").value;
+        let six = +document.getElementById("6").value;
+        document.getElementById("result").innerText = one * 12000 + two * 18000 + three * 18000 +
+            four * 16000 + five * 10000 + six * 15000;
+    }
+</script>
+</body>
+</html>

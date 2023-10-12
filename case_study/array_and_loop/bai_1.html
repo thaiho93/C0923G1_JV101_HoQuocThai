@@ -14,9 +14,9 @@
     }
     document.write("Mảng A: " + arrayA + "<br>");
 
-    function prefixSums(a) {
+    function prefixSums(number) {
         let sum = 0;
-        for (let i = 0; i <= a; i++) { // Sửa lỗi: thay arrayA[i] thành a, và chạy từ 0 đến a, không phải arrayA.length
+        for (let i = 0; i <= number; i++) {
             sum += arrayA[i];
         }
         return sum;

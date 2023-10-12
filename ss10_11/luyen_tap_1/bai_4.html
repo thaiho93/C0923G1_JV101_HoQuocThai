@@ -2,9 +2,24 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>số đầu tiên chia hết cho 5</title>
 </head>
 <body>
+<script>
+    document.write("số đầu tiên trong dãy fibonacci chi hết cho 5 là 0" + "<br>");
 
+    let fibo1 = 0;
+    let fibo2 = 1;
+
+    for (let i = 2; i < 20; i++) {
+        let fiboNext = fibo1 + fibo2;
+        fibo1 = fibo2;
+        fibo2 = fiboNext;
+        if (fiboNext % 5 === 0) {
+            document.writeln("số thứ 2 trong dãy chia hết cho 5 là: " + fiboNext);
+            break;
+        }
+    }
+</script>
 </body>
 </html>
